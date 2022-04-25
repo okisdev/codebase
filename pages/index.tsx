@@ -21,7 +21,7 @@ const Home = ({ posts }: any) => {
     return (
         <div>
             <Head>
-                <title>Harry Yep's Codebase</title>
+                <title>Harry Yep&apos;s Codebase</title>
             </Head>
 
             <div className='font-Rubik'>

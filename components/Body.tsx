@@ -16,7 +16,7 @@ const Body = ({ posts }: any) => {
                 <div className='w-4/12 p-1 h-[650px] overflow-scroll'>
                     {posts.map((post: any) => {
                         return (
-                            <div>
+                            <div key={post._id}>
                                 <p className='text-slate-500 text-xs'>{post._raw.sourceFileDir}</p>
                                 <Link href={'?language=' + post._raw.sourceFileDir + '&file=' + post._raw.sourceFileName.replace('.mdx', '')}>
                                     <a className='transition ease-in-out duration-500 hover:bg-yellow-400 dark:hover:bg-yellow-600'>{post.title}</a>
@@ -41,6 +41,7 @@ const Body = ({ posts }: any) => {
                                             ._raw.sourceFilePath.replace('.mdx', '') +
                                         posts.find((post: any) => post._raw.sourceFileDir === query.language && post._raw.sourceFileName.replace('.mdx', '') === query.file).suffix
                                     }`}
+                                    passHref
                                 >
                                     <button>
                                         <BiDownload className='w-6 h-6' />
