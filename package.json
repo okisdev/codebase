@@ -8,9 +8,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "contentlayer": "0.2.7",
+    "contentlayer": "0.2.8",
     "next": "13.0.1",
-    "next-contentlayer": "0.2.7",
+    "next-contentlayer": "0.2.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "4.6.0",
