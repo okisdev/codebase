@@ -18,7 +18,7 @@ const Body = ({ posts }: any) => {
                         return (
                             <div key={post._id}>
                                 <p className='text-slate-500 text-xs'>{post._raw.sourceFileDir}</p>
-                                <Link href={'?language=' + post._raw.sourceFileDir + '&file=' + post._raw.sourceFileName.replace('.mdx', '')}>
+                                <Link href={'?language=' + post._raw.sourceFileDir + '&file=' + post._raw.sourceFileName.replace('.mdx', '')} legacyBehavior>
                                     <a className='transition ease-in-out duration-500 hover:bg-yellow-400 dark:hover:bg-yellow-600'>{post.title}</a>
                                 </Link>
                             </div>
@@ -29,7 +29,7 @@ const Body = ({ posts }: any) => {
                     {query.language && query.file ? (
                         <div>
                             <div className='flex flex-row space-x-3'>
-                                <Link href='/' passHref>
+                                <Link href='/' passHref legacyBehavior>
                                     <button>
                                         <AiOutlineClear className='w-6 h-6' />
                                     </button>
@@ -42,6 +42,7 @@ const Body = ({ posts }: any) => {
                                         posts.find((post: any) => post._raw.sourceFileDir === query.language && post._raw.sourceFileName.replace('.mdx', '') === query.file).suffix
                                     }`}
                                     passHref
+                                    legacyBehavior
                                 >
                                     <button>
                                         <BiDownload className='w-6 h-6' />

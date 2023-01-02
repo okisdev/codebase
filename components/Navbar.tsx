@@ -1,14 +1,13 @@
 import Link from 'next/link';
 
 import { AiOutlineHome } from 'react-icons/ai';
-import { FaBookOpen } from 'react-icons/fa';
-import { HiOutlinePhotograph, HiOutlineDocumentDuplicate } from 'react-icons/hi';
+import { HiOutlineBookOpen, HiOutlinePhotograph, HiOutlineDocumentDuplicate } from 'react-icons/hi';
 
 const navbarItems = [
     { id: 1, name: 'Home', link: 'https://www.harrly.com', icon: AiOutlineHome },
-    { id: 2, name: 'Blog', link: 'https://blog.harrly.com', icon: FaBookOpen },
-    { id: 3, name: 'Photo', link: 'https://photo.harrly.com', icon: HiOutlinePhotograph },
-    { id: 4, name: 'Docs', link: 'https://docs.harrly.com', icon: HiOutlineDocumentDuplicate },
+    { id: 2, name: 'Blog', link: 'https://www.harrly.com/blog', icon: HiOutlineBookOpen },
+    { id: 3, name: 'Photo', link: 'https://www.harrly.com/photo', icon: HiOutlinePhotograph },
+    { id: 4, name: 'Docs', link: 'https://docs.okis.dev', icon: HiOutlineDocumentDuplicate },
 ];
 
 const Navbar = () => {
@@ -18,7 +17,7 @@ const Navbar = () => {
                 {navbarItems.map((item) => {
                     return (
                         <div key={item.id} className='px-3 rounded-full transition ease-in-out duration-500 hover:text-yellow-400 dark:hover:text-yellow-600'>
-                            <Link href={item.link} passHref>
+                            <Link href={item.link} passHref legacyBehavior>
                                 <a title={item.name}>
                                     <item.icon className='w-6 h-6' />
                                 </a>
