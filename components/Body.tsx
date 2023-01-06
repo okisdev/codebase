@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 import { AiOutlineClear } from 'react-icons/ai';
 import { BiDownload } from 'react-icons/bi';
